@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+html {
+  height: 100%;
+}
+
+body {
+  font: 14px/22px "Roboto", Arial, sans-serif;
+  background: #393156;  
+  height: 100%;
+}
+
+.browser {
+  margin: 50px auto;
+  background: #1c1b29;
+  width: 80%;
+  height: 80%;
+  min-height: 450px;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+.browser-buttons {
+    height: 20px;    
+}
+
+.browser-buttons .purp {
+    background-color: #705bef;
+    border: 1px solid #705bef;
+}
+
+.browser-buttons .darkpink {
+    background-color: #b651f2;
+    border: 1px solid #b651f2;
+}
+
+.browser-buttons .pink {
+    background-color: #e789b9;
+    border: 1px solid #e789b9;
+}
+
+.browser-buttons i {
+    width: 9px;
+    height: 9px;
+    display: block;
+    margin-right: 7px;
+    border-radius: 100%;
+    float: left;
+}
+
+.browser-top-container {
+  position: relative;
+  display: flex;
+}
+
+.fa-lock {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  color: #e789b9;
+}
+
+.browser-address {
+  background-color: #705bef;
+  padding: 5px 10px 5px 22px;
+  width: 97%;
+  border: 1px solid darken(#705bef, 2%);
+  outline: none;
+  transition: background-color 0.3s ease-out;
+}
+
+.browser-address-animation {
+  background-color: #626262;
+  color: white;
+  border: 1px solid #383838;
+}
+
+.menu-button {
+  margin: 3px 10px 0 14px;
+  color: #e789b9;
+  padding: 3px 10px;
+  font-size: 18px;
+  
+  &:hover {
+    background: #1c1b29;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10px;
+  
+}
+
+.menu {  
+  position: absolute;
+  right: 20px;
+  background: #393156;
+  width: 130px;
+  padding: 10px 0;
+  border-radius: 7px;
+  margin-left : -10px;
+  display: none;
+  
+  
+  li {
+    padding: 8px 0;
+    &:hover {
+      background: darken(#DFDFDF, 7%);
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: #e789b9;
+    cursor: default;
+    margin: 12px;
+  }
+}
+
+.browser-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+.google-logo {
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.google-search {  
+  width: 40%;
+  margin-top: 16px;
+  @extend .browser-address
+}
+
+.incognito-logo {
+  display: none;
+  width: 120px;
+  display: none;
+}
+
+.incognito-header {
+  font-size: 200%;
+  color: #D6D6D6;
+  margin-bottom: 30px;
+  display: none;
+  font-weight: 300;
+}
+
+.incognito-info {
+  font-size: 14px;
+  width: 380px;
+  max-width: 100%;
+  color: #D6D6D6;
+  display: none;
+}
+
+
+/* Radial Out */
+.hvr-radial-out {
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+  transition-property: color;
+  transition-duration: 0.3s;
+    
+}
+.hvr-radial-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #323232;
+  border-radius: 100%;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out; 
+}
+
+.hvr-radial-out-animation:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #393156;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1c1b29;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e789b9;
+}
